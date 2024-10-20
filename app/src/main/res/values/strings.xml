@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">soccerskils</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
+    <string name="Remember_me">Remember me</string>
+    <string name="Forgot_password">Forgot password?</string>
+    <string name="signup_now">SIGNUP NOW</string>
+    <string name="donthaveacc">Don`t have an account?</string>
+    <string name="SignIn">SignIn</string>
+    <string name="email">Email</string>
+    <string name="Password_conf">Password confirmation</string>
+    <string name="Create">Create</string>
+    <string name="Back">Back</string>
+    <string name="Send_your_password">Send your password!</string>
+    <string name="Send_your_login">Send your login!</string>
+    <string name="Transition_to_a_new_activity">Transition to a new activity</string>
+    <string name="registration_window">Registration window</string>
+</resources>

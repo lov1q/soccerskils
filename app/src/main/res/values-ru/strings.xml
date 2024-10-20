@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">soccerskils</string>
+    <string name="Login">Имя пользователя</string>
+    <string name="Password">Пароль</string>
+    <string name="Remember_me">Запомнить меня</string>
+    <string name="Forgot_password">Забыли пароль</string>
+    <string name="signup_now">Зарегистрироваться сейчас</string>
+    <string name="donthaveacc">Нету аккаунта?</string>
+    <string name="SignIn">Авторизоваться</string>
+    <string name="email">Электронная почта</string>
+    <string name="Password_conf">Подтверждение пароля</string>
+    <string name="Create">Создать</string>
+    <string name="Back">Назад</string>
+    <string name="Send_your_password">Введите пароль!</string>
+    <string name="Send_your_login">Введите логин!</string>
+    <string name="Transition_to_a_new_activity">Переход на новую активность</string>
+    <string name="registration_window">Окно регистрации</string>
+</resources>
