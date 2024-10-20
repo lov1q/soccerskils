@@ -1,6 +1,8 @@
 package com.example.soccerskils
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -14,10 +16,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.room.Room
 import com.example.soccerskils.databinding.ActivityMainBinding
 import com.example.soccerskils.databinding.ActivitySoccer2Binding
+import com.google.ai.client.generativeai.common.shared.Content
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     var binding: ActivityMainBinding? = null
+    val MY_SETTINGS: String = "my_settings"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,7 +30,18 @@ class MainActivity : AppCompatActivity() {
         /*setContentView(R.layout.activity_main)
         val name = findViewById<TextView>(R.id.editTextText)
         val password = findViewById<TextView>(R.id.editTextText2)*/
+        var sp:SharedPreferences=getSharedPreferences(MY_SETTINGS, Context.MODE_PRIVATE)
+        var hasVizited:Boolean=sp.getBoolean("hasVizited", false)
+        if(!hasVizited){
+            val clickActivity2 = Intent(this@MainActivity, author::class.java)
+            startActivity(clickActivity2)
+            var editor:SharedPreferences.Editor=sp.edit()
+            editor.putBoolean("hasVizited", true)
+            editor.apply()
+        }
     }
+
+
 
     //var dbHelper = DBHelper(this)
     fun signf(v: View){

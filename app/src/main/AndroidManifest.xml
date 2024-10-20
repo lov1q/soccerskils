@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Soccerskils"
         tools:targetApi="31">
         <activity
+            android:name=".author"
+            android:exported="false" />
+        <activity
             android:name=".soccer3"
             android:exported="false" />
         <activity
