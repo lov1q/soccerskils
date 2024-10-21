@@ -69,7 +69,6 @@ class MainActivity : AppCompatActivity() {
                 editor.putString("userMaxCount", maxCountUser)
                 editor.apply()
             }
-
         }
 
 
