@@ -40,7 +40,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/img1"
+        app:srcCompat="@drawable/img3"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -51,7 +51,7 @@
         android:ems="10"
         android:inputType="text"
         android:text=""
-        android:hint="@string/Login"
+        android:hint="@string/email"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"

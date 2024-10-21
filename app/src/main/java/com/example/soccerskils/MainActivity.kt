@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     var binding: ActivityMainBinding? = null
     val MY_SETTINGS: String = "my_settings"
+    val MY_SETTINGSS: String = "my_soccers"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         /*setContentView(R.layout.activity_main)
         val name = findViewById<TextView>(R.id.editTextText)
         val password = findViewById<TextView>(R.id.editTextText2)*/
-        var sp:SharedPreferences=getSharedPreferences(MY_SETTINGS, Context.MODE_PRIVATE)
+        var sp: SharedPreferences=getSharedPreferences(MY_SETTINGS, Context.MODE_PRIVATE)
         var hasVizited:Boolean=sp.getBoolean("hasVizited", false)
         if(!hasVizited){
             val clickActivity2 = Intent(this@MainActivity, author::class.java)
@@ -59,6 +60,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        lifecycleScope.launch{
+            val maxCountUser = db?.getMaxCount()
+            if (maxCountUser != null){
+                val sp: SharedPreferences = getSharedPreferences(MY_SETTINGSS, MODE_PRIVATE)
+                val editor = sp.edit()
+
+                editor.putString("userMaxCount", maxCountUser)
+                editor.apply()
+            }
+
+        }
 
 
 

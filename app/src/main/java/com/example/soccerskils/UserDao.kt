@@ -14,6 +14,8 @@ interface UserDao {
     @Query("SELECT * FROM mySoccers WHERE email = :email LIMIT 1")
     suspend fun getByEmail(email: String): User
 
+    @Query("SELECT name FROM mySoccers WHERE count = (SELECT MAX(count) FROM mySoccers)")
+    suspend fun getMaxCount(): String?
 
     @Insert
     suspend fun insert(mySoccers: User)
